@@ -28,30 +28,22 @@ public class Sorteo {
 
 	
 	
-	public int generarDecimoAleatorio (int decimo) {
+	public int generarDecimoAleatorio () {
 		
 		Random rnd = new Random(System.nanoTime());
 		int desde=00001;
 		int hasta=99999;
-		decimo=rnd.nextInt(hasta-desde+1)+desde;
-		return decimo;
+		return rnd.nextInt(hasta-desde+1)+desde;
 		
 	}
 	
 	public int elegirDecimo (int decimo) {
-		decimo=Leer.datoInt();
-		if(decimo<=99999) {
-			decimo=decimo;
-		}else {
-			comunicarProblema();
-		}
+		
 		return decimo;
 	}
 	
-	public int hacerSorteo () {
+	public int hacerSorteo (int desde, int hasta) {
 		Random rnd = new Random(System.nanoTime());
-		int desde=00001;
-		int hasta=99999;
 		loteria=rnd.nextInt(hasta-desde+1)+desde;
 		return loteria;
 	}
@@ -60,15 +52,13 @@ public class Sorteo {
 		System.out.println(decimo);
 	}
 	
-	public void comunicarProblema() {
-		System.out.println("No se puede un número tan largo");
-	}
 	
-	public void comprobarSorteo(int decimo) {
+	public void comprobarSorteo(int decimo, int desde, int hasta) {
+		loteria=hacerSorteo(desde, hasta);
 		if (decimo==loteria){
 			System.out.println("¡¡ENHORABUENA, HAS GANADO");
 		}else {
-			System.out.printf("Tu número es el "+decimo+" y el premiado es el "+generarDecimoAleatorio(decimo)+". Has perdido\n");
+			System.out.printf("El número premiado es el "+loteria+". Has perdido\n");
 		}
 	}
 
