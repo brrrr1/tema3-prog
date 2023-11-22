@@ -9,7 +9,7 @@ public class Principal {
 		
 		double precioUnitario;
 		int cantidadBilletes;
-		int ticketsComprados;
+		int ticketsComprados=0;
 		
 		Ticket t = new Ticket();
 		Maquina m = new Maquina();
