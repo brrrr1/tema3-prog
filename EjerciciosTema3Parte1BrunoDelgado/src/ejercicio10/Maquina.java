@@ -48,11 +48,13 @@ public class Maquina {
 		 System.out.println("*************************************************************");
 			System.out.println("Precio\t\tCantidad\t\tTotal");
 			System.out.println(precioUnitario+"\t\t"+cantidadBilletes+"\t\t\t"+calcularCoste(precioUnitario, cantidadBilletes));
-			System.out.println("-------------");
+			System.out.println("-----------------------");
 			System.out.println("Pagado: ");
 			System.out.print(pagado);
 			System.out.println("\nCambio: ");
 			System.out.print(hacerCambio(pagado, precioUnitario, cantidadBilletes));
+			System.out.println("-----------------------");
+			System.out.println("Mensaje válido para "+cantidadBilletes+" personas");
 			System.out.println("\n*************************************************************");
 	 }
 	 
@@ -60,4 +62,23 @@ public class Maquina {
 	 public void hacerSaldoTotal() {
 			System.out.println(precioTotal);
 		}
+	 
+	 public boolean comprobarContrasena(String contrasena, String leerContrasena) {
+		 
+		 if(leerContrasena==contrasena) {
+			 return true;
+		 }else {
+			 return false;
+		 }
+	 }
+	 public int verComprob(String contrasena, String leerContrasena) {
+		 if (comprobarContrasena(contrasena, leerContrasena)==true) {
+			 int c = 1;
+			 return c;
+		 }else {
+			 int c = 2;
+			 return c;
+		 }
+		 
+	 }
 }
