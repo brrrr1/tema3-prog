@@ -15,7 +15,7 @@ public class Empleado {
 	}
 	
 	public void felicitarCumple(Fecha manolo) {
-		if (manolo.getDia()==fechaNacimiento.getDia()&&manolo.getMes()==fechaNacimiento.getMes()){
+		if (manolo.getDia()==fechaNacimiento.getDia()&&manolo	.getMes()==fechaNacimiento.getMes()){
 			System.out.println("Felicidades campeón!!!");
 			}
 	}
