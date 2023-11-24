@@ -14,15 +14,16 @@ public class Principal {
 		double precioTotal=0;
 		double pagado = 0;
 		int eleccion;
+		int cero=0;
 		
 		Ticket t = new Ticket(precioUnitario);
-		Maquina m = new Maquina(precioUnitario, precioTotal);
+		Maquina m = new Maquina(contrasena, precioTotal, t);
 		
 		
 		System.out.println("Bienvenido, introduce la contraseña para entrar al sistema");
 		System.out.print("Contraseña: ");
 		leerContrasena=Leer.dato();
-		if(m.verComprob(contrasena, leerContrasena)==1) {
+		if(m.comprobarContrasena(leerContrasena)==true) {
 			System.out.println("Bienvenido...");
 			System.out.println();
 			do {
@@ -31,6 +32,7 @@ public class Principal {
 						2 para compra de billete/s
 						3 para imprimir el ticket
 						4 para ver saldo total
+						5 para reiniciar el saldo total
 						0 para salir
 						""");
 				eleccion=Leer.datoInt();
@@ -72,7 +74,12 @@ public class Principal {
 				
 				case 4:
 					System.out.println("Saldo total:");
-					m.hacerSaldoTotal();
+					System.out.println(m.hacerSaldoTotal(precioUnitario, cantidadBilletes));
+				break;
+				
+				case 5:
+					System.out.println("Reiniciando saldo...");
+					m. setPrecioTotal(cero);
 				break;
 				
 				case 0:
