@@ -79,7 +79,7 @@ public class Principal {
 				
 				case 5:
 					System.out.println("Reiniciando saldo...");
-					m. setPrecioTotal(cero);
+					m.setPrecioTotal(cero);
 				break;
 				
 				case 0:
