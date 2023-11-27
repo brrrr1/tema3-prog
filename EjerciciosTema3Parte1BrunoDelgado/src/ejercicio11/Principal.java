@@ -24,7 +24,7 @@ public class Principal {
 		notas = new int [tam];
 		Alumno a1 = new Alumno(Curso, notas, suspensos, media);
 		System.out.println("Poner notas");
-		GestionNotas g1 = new GestionNotas(a1);
+		GestionNotas g1 = new GestionNotas(a1, notas);
 		for (int i = 0; i < notas.length; i++) {
 			notas[i]=Leer.datoInt();
 			g1.ponerNotas(notas);
