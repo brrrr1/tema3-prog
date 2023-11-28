@@ -2,6 +2,8 @@ package ejercicio01;
 
 import java.util.Arrays;
 
+
+
 public class Tienda {
 
 	private Producto lista[];
@@ -25,12 +27,29 @@ public class Tienda {
 
 	
 	public double calcularPrecioCoste(double precioFabrica, double porcentajeTransporte) {
-		return precioFabrica*porcentajeTransporte+precioFabrica;
+		int cien=100;
+		return ((precioFabrica/cien)*porcentajeTransporte)+precioFabrica;
 	}
 	
 	public double calcularPvp(double precioCoste,double pvp) {
-		return precioCoste*pvp+precioCoste;
+		int cien=100;
+		return precioCoste+((pvp/cien)*precioCoste);
 	}
+	
+	public boolean comprobarFragil(int leerFragil) {
+		if (leerFragil==1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void add(Producto p, int posicion) {
+		lista[posicion]=p;
+	}
+	
+	
+	
 	
 }
 
