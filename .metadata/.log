@@ -4507,3 +4507,6 @@ Caused by: java.io.FileNotFoundException: C:\Users\delgado.hebru24_tria\AppData\
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
 	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:179)
 	... 77 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-11-28 20:51:36.326
+!MESSAGE Can't connect to any repository: 
