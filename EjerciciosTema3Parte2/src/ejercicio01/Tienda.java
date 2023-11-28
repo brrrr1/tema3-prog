@@ -48,6 +48,24 @@ public class Tienda {
 		lista[posicion]=p;
 	}
 	
+	public double hacerVentaTotal(double ventaTotal, double pvp, double precioCoste) {
+	 	ventaTotal += calcularPvp(precioCoste, pvp);
+		return ventaTotal;
+	}
+ 
+ public void verVentaTotal(double ventaTotal) {
+	 System.out.println(ventaTotal);
+ }
+ 
+
+ 	public double hacerGastoTotal(double gastoTotal, double precioFabrica) {
+	 	gastoTotal += precioFabrica;
+		return gastoTotal;
+	}
+ 	
+ 	public void verGastoTotal(double gastoTotal) {
+ 		System.out.println(gastoTotal);
+ 	}
 	
 	
 	

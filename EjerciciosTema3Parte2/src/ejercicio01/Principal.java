@@ -18,6 +18,8 @@ public class Principal {
 		int leerFragil;
 		int posicion=0;
 		int eleccion;
+		double ventaTotal=0;
+		double gastoTotal=0;
 		Producto p;
 		Tienda t;
 		Producto lista[];
@@ -31,7 +33,8 @@ public class Principal {
 			System.out.println("""
 					1 para añadir un producto
 					2 para  ver la lista completa
-					3 para ver los productos que llevas añadidos
+					3 para calcular las posibles ganancias totales
+					4 para ver el gasto total de la tienda
 					0 para salir
 					""");
 			
@@ -68,6 +71,10 @@ public class Principal {
 		p = new Producto(precioFabrica, precioCoste, porcentajeTransporte , fragil, pvp);	
 		
 		t.add(p, posicion);
+		ventaTotal=t.hacerVentaTotal(ventaTotal, pvp, precioCoste);
+		//System.out.println("Total: "+ventaTotal);
+		gastoTotal=t.hacerGastoTotal(gastoTotal, precioFabrica);
+		
 		
 		posicion++;
 		
@@ -79,6 +86,17 @@ public class Principal {
 					System.out.println(lista[i]);
 				}
 			break;
+			
+			case 3:
+				t = new Tienda(lista);
+				
+				t.verVentaTotal(ventaTotal);
+				
+			break;
+			
+			case 4:
+				t = new Tienda(lista);
+				t.verGastoTotal(gastoTotal);
 		
 			case 0:
 				System.out.println("Adiós");
