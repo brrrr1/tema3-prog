@@ -63,8 +63,8 @@ public class Tienda {
 		return gastoTotal;
 	}
  	
- 	public void verGastoTotal(double gastoTotal) {
- 		System.out.println(gastoTotal);
+ 	public void verGastoTotal(double gastoTotal, double pvp) {
+ 		System.out.println(gastoTotal-((pvp/10)*(pvp/10)));
  	}
 	
 	

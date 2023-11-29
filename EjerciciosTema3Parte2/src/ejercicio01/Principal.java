@@ -95,8 +95,9 @@ public class Principal {
 			break;
 			
 			case 4:
+				pvp = 0;
 				t = new Tienda(lista);
-				t.verGastoTotal(gastoTotal);
+				t.verGastoTotal(gastoTotal, pvp);
 		
 			case 0:
 				System.out.println("Adiós");
